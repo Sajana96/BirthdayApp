@@ -122,7 +122,7 @@ isset($_GET['userid'])
         </div>
     </div>
     <div style="width: 600px; margin-left: 2cm">
-        <form>
+        <form method="post" action="#">
             <strong>First Name: </strong><input type="text" name="fName" class="form-control form-control"
                 value="<?php echo $fname ?>">
             <strong>Last Name: </strong><input type="text" name="lName" class="form-control form-control"
