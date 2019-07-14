@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <body>
+
+        <ul>
+            <li><a class="active" href="viewuser.php">View Users</a></li>
+            <li><a href="viewbirthdays.php">Birthdays</a></li>
+            <li><a href="treatshedule.php">Treats</a></li>
+            <li><a href="logout.php">Logout</a></li>
+        </ul>
+        <div class="jumbotron text-center">
+            <h1>Register Users</h1>
+
+        </div>
+        <div class="container" style="margin-top: 0cm; margin-left: 5.5cm">
+            <h3>Fill the following fields to get registered</h3>
+            <form name="frmAdd" method="POST" action="./adduser.php">
+                <fieldset style="border: 1px solid; width: 850px; padding: 1cm;">
+                    <div class="form-group">
+                        <label style="font-weight: bold" for="firstName">First Name:</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Enter First Name"
+                            name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label style="font-weight: bold" for="lastName">Last Name:</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name"
+                            name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label style="font-weight: bold" for="preferredName">Preferred Name:</label>
+                        <input type="text" class="form-control" id="preferredName" placeholder="Enter Preferred Name"
+                            name="preferredName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="font-weight: bold" for="dob">Date of Birth:</label>
+
+                        <input type="date" id="dob" name="dob" value="1990-01-01" min="1920-01-01" max="2030-12-31"
+                            class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label style="font-weight: bold" for="oEmail">Office Email:</label>
+                        <input type="email" class="form-control" id="oEmail" placeholder="Enter Office Email"
+                            name="oEmail">
+                    </div>
+                    <div class="form-group">
+                        <label style="font-weight: bold" for="pEmail">Personal Email:</label>
+                        <input type="email" class="form-control" id="pEmail" placeholder="Enter Personal Email"
+                            name="pEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label style="font-weight: bold" for="mobile">Telephone:</label>
+                        <input type="text" class="form-control" id="mobile"
+                            placeholder="Enter Mobile Number ex:0777123456" name="mobile" required pattern="[0-9]{10}"
+                            title="Enter Number using 10 Digits ">
+                    </div>
+                    <div class="form-group">
+                        <label style="font-weight: bold" for="facebook">Facebook:</label>
+                        <input type="url" class="form-control" id="facebook"
+                            placeholder="Enter your Facebook profile link" name="facebook">
+                    </div>
+                    <div class="form-group">
+                        <label style="font-weight: bold" for="designation">Designation:</label>
+                        <input type="text" class="form-control" id="designation" placeholder="Enter your Designation"
+                            name="designation">
+                    </div>
+                    <div class="form-group"
+                        style="background-color:#b1b9c7; padding: 0.1cm; padding-left: 2cm; border-radius: 25px">
+                        <label style="font-weight: bold" for="Category">Category:</label>
+                        <div class="form-check-inline">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" value="Student" name="category"
+                                    checked>Student
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" value="Admin"
+                                    name="category">Administrative
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" value="Temp-Academic"
+                                    name="category">Temporary
+                                Academic
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" value="Academic" name="category">Academic
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label style="font-weight: bold" for="nic">NIC:</label>
+                        <input type="text" class="form-control" id="nic"
+                            placeholder="Enter your NIC Number  ex:123456789V" name="nic" required pattern="[0-9Vv]{10}"
+                            title="Enter NIC as required ">
+                    </div>
+                    <div class="form-group">
+                        <label style="font-weight: bold" for="index">Index Number:</label>
+                        <input type="text" class="form-control" id="index"
+                            placeholder="Enter your Index Number ex:IM/2016/092" name="index">
+                    </div>
+                    <div class="form-group"
+                        style="background-color:#b1b9c7; padding: 0.1cm; padding-left: 2cm; border-radius: 25px">
+                        <label style="font-weight: bold" for="Category">Food Preference:</label>
+                        <div class="form-check-inline">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" value="Veg" name="food" checked>Veg
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" value="Non-Veg" name="food">Non-Veg
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="note" style="font-weight: bold">Note:</label>
+                        <textarea class="form-control" rows="5" id="note" name="note"></textarea>
+                    </div>
+
+                    <button type="submit" name="submit" class="btn btn-success btn-large">Submit</button>
+                    <button type="reset" name="reset" class="btn btn-danger btn-large">Clear</button>
+
+
+
+
+                </fieldset>
+            </form>
+        </div>
+    </body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>

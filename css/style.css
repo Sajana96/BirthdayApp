@@ -1,0 +1,25 @@
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #364044;
+  border: solid 1px #64665f;
+  border-radius: 20px;
+  margin-right: 1cm;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+
+}
+
+#treat {
+  color: rgb(255, 255, 255);
+  
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+.treatfont{
+  color: rgb(255, 255, 255);
+}
