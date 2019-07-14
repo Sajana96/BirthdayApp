@@ -198,7 +198,7 @@ if(!$result) {
                             $queryDelete="Delete from treats where treat_id='$treatId'";
                             $resultsDelete = mysqli_query($con,$queryDelete);
 
-                            if($resultDelete){
+                            if($resultsDelete){
                                 exit( "<h1>Deleted<h1><a href='treatshedule.php'>Return</a>");
 
                             }
