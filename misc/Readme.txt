@@ -1,5 +1,5 @@
-username : sajana96
+username : weerakoonsajana@gmail.com
 password : 123456
 
-username : hiluxgshock
+username : nimal@yahoo.com
 password : 789

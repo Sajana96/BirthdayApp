@@ -7,7 +7,7 @@ if (isset($_POST['submit'])){
 	$username = $_POST["username"];
 	$password = $_POST["password"];
 	
-	$query = "select a.userName, a.password, a.userType, u.fname, u.lname, u.category from accessusers a, userdetails u where a.userName = '$username' and a.password='$password' and u.user_id = a.user_id";
+	$query = "select a.password, a.userType, u.fname, u.lname, u.category, u.pemail from accessusers a, userdetails u where u.pemail = '$username' and a.password='$password' and u.user_id = a.user_id";
 	$results = mysqli_query($con, $query);
 	
 	if(mysqli_num_rows($results)==1){
@@ -50,11 +50,11 @@ if (isset($_POST['submit'])){
                 <h3 class="text-center text-light bg-primary p-3">User Login</h3>
                 <form action="<?php $_SERVER['PHP_SELF']?>" method="POST" class="p-4" name="frmlogin">
                     <div class="form-group">
-                        <input type="text" name="username" class="form-control form-control-lg" placeholder="Username" required>
+                        <input type="text" name="username" class="form-control form-control-lg" placeholder="Enter your personal Email" required>
                     </div>
                     <div class="form-group">
                         <input type="password" name="password" class="form-control form-control-lg"
-                            placeholder="Password" required>
+                            placeholder="Enter Password provided" required>
                     </div>
                     <div class="form-group">
                         <button name="submit"
